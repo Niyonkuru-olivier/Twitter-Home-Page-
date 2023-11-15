@@ -1,0 +1,33 @@
+
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-image:url('cover.jfif')no-repeat;
+    background-size: cover;
+    font-family:arial;
+}
+
+/* Style for the container div */
+.container {
+    text-align: center;
+}
+
+/* Style for the "Sign Up" and "Sign In" links */
+#signin li {
+    display: inline; /* Display the list items inline */
+    margin: 0 10px; /* Add some space between the links */
+}
+
+/* Style the links themselves */
+#signin li a {
+    text-decoration: none; /* Remove underlines from the links */
+    color: #000; /* Set the text color to black (you can choose a different color) */
+    font-weight: bold; /* Make the text bold */
+    font-size: 16px; /* Set the font size (adjust as needed) */
+}
+
+
+
+
+

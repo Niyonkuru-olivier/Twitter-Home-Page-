@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List of Countries</title>
+  <style>
+    /* CSS for styling the search input */
+    #search {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+}
+  </style>
+</head>
+<body>
+  <h1>List of Countries</h1>
+  
+  <!-- Add a search input field -->
+  <input type="text" id="search" placeholder="Search for a country...">
+
+  <!-- Create an unordered list to display the countries -->
+  <ul id="country-list">
+    <!-- Country names will be added here dynamically -->
+  </ul>
+
+  <script>
+    // An array of country names
+    const countries = [
+      "Afghanistan", "Albania", "Algeria", /* ... and so on, add all countries ... */
+    ];
+const searchInput = document.getElementById("search");
+    const countryList = document.getElementById("country-list");
+
+    // Function to display countries based on the search input
+    function displayCountries() {
+      const searchTerm = searchInput.value.toLowerCase();
+      countryList.innerHTML = ""; // Clear the current list
+
+      countries.forEach(country => {
+        if (country.toLowerCase().includes(searchTerm)) {
+          const listItem = document.createElement("li");
+          listItem.textContent = country;
+          countryList.appendChild(listItem);
+        }
+      });
+    }
+searchInput.addEventListener("input", displayCountries);
+
+    // Initially, display all countries
+    displayCountries();
+  </script>
+</body>
+</html>
